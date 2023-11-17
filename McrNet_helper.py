@@ -186,3 +186,33 @@ def Calculate(hw1,hw2, tw, bf1, tf1, bf2,tf2, L, M1, M2, model, model_scaler, u)
         txt_result+='\n\npsi='+str(psi)
         #txt_result+='\n\ncalculation time was '+str(round(end-start,5))+' seconds'
         print('Results:\n\n'+txt_result)
+
+def Calculate_ResultOnly(hw1,hw2, tw, bf1, tf1, bf2,tf2, L, psi, model, model_scaler, u):
+
+    
+        #check the ranges of input values and warn the user if outside the range
+    #    if not MakeNNRangeChecks(float(hw1),float(hw2),float(tw),float(bf1),float(tf1),float(bf2),float(tf2),float(L)):
+            # self.Results.configure(text='No results.', justify='left')
+    #        return
+
+
+            
+            
+            
+
+        #if float(M2)==0 or float(M1)==0:
+        #    psi=0
+        #else:
+        #    psi=float(M1)/MMax/(1*(float(M2)/MMax))
+
+        #print(hw2)
+     
+        #msg.showinfo('Inputs','hw1='+str(hw1)+'\n'+'hw2='+str(hw2))
+        #self.Results.configure(text='teste')
+        #self.Results.configure(fg='#FF0000')
+        #self.hw1.configure(justify='left')
+
+        
+        Mcr=CalcMcr_NN(float(hw1),float(hw2),float(tw),float(bf1),float(tf1),float(bf2),float(tf2),psi,float(L),model,model_scaler,u)*10**-6
+
+        return Mcr
