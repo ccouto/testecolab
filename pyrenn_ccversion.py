@@ -936,22 +936,22 @@ def loadNN(filename):
 	data= list(csv.reader(open(filename,"r")))
 
 	#read network structure nn
-	nn = list(np.array(data[1],dtype=np.int))
+	nn = list(np.array(data[1],dtype=np.int32))
 	
 	#read input delays dIn
-	dIn = list(np.array(data[3],dtype=np.int))
+	dIn = list(np.array(data[3],dtype=np.int32))
 	
 	#read internal delays dIntern
 	if data[5] == ['','']:
 		dIntern = []
 	else:
-		dIntern = list(np.array(data[3],dtype=np.int))
+		dIntern = list(np.array(data[3],dtype=np.int32))
 		
 	#read output delays dIOut
 	if data[7] == ['','']:
 		dOut = []
 	else:
-		dOut = list(np.array(data[7],dtype=np.int))
+		dOut = list(np.array(data[7],dtype=np.int32))
 	
 	#read factor for input data normalization normP
 	normP = np.array(data[9],dtype=np.float)
