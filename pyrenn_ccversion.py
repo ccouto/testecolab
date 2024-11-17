@@ -954,10 +954,10 @@ def loadNN(filename):
 		dOut = list(np.array(data[7],dtype=np.int32))
 	
 	#read factor for input data normalization normP
-	normP = np.array(data[9],dtype=np.float)
+	normP = np.array(data[9],dtype=np.float64)
 	
 	#read factor for output data normalization normY
-	normY = np.array(data[11],dtype=np.float)
+	normY = np.array(data[11],dtype=np.float64)
 	
 	#read weight vector w
 	w = pd.read_csv(filename,sep=',',skiprows=range(12))['w'].values
